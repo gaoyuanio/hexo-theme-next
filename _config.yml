@@ -14,11 +14,13 @@ cache:
   enable: true
 
 # Remove unnecessary files after hexo generate.
-minify: false
+# NexT允许最小化Hexo生成
+minify: true
 
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
+  footer: source/_data/footer.swig
   #head: source/_data/head.njk
   #header: source/_data/header.njk
   #sidebar: source/_data/sidebar.njk
@@ -36,10 +38,10 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+# scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 # Dark Mode
 darkmode: false
@@ -65,10 +67,11 @@ custom_logo: #/uploads/custom-logo.jpg
 # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
 creative_commons:
-  license: by-nc-sa
+  license:
   sidebar: false
   post: false
   language:
+
 
 
 # ---------------------------------------------------------------
@@ -80,12 +83,12 @@ creative_commons:
 # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
 # External url should start with http:// or https://
 menu:
-  #home: / || fa fa-home
-  #about: /about/ || fa fa-user
-  #tags: /tags/ || fa fa-tags
-  #categories: /categories/ || fa fa-th
-  #archives: /archives/ || fa fa-archive
-  #schedule: /schedule/ || fa fa-calendar
+  home: / || fa fa-home
+  about: /about/ || fa fa-user
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+  # schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
 
@@ -125,9 +128,9 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: /images/avatar.jpeg
   # If true, the avatar will be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
   rotated: false
 
@@ -139,9 +142,11 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
-  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
-  #Weibo: https://weibo.com/yourname || fab fa-weibo
+  GitHub: https://github.com/gaoyuanio || fab fa-github
+  E-Mail: mailto:gaoyuan9841@163.com || fa fa-envelope
+  QQ: https://qm.qq.com/cgi-bin/qm/qr?k=QW2diWiXakeqYNjughKYKvo9LVXWd0rY&noverify=0 || fab fa-qq
+  WeChat: gy0728ol || fab fa-weixin
+  # Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
@@ -157,13 +162,16 @@ social_icons:
 
 # Blog rolls
 links_settings:
-  icon: fa fa-globe
-  title: Links
+  icon: fa fa-link
+  title: 友情链接
   # Available values: block | inline
-  layout: block
+  layout: inline
 
 links:
-  #Title: https://example.com
+  链接1: https://example.com
+  链接2: https://example.com
+  链接3: https://example.com
+  链接4: https://example.com
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
@@ -203,11 +211,11 @@ footer:
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
-    name: fa fa-heart
+    name: fas fa-bone
     # If you want to animate the icon, set it to true.
     animated: false
     # Change the color of icon, using Hex Code.
-    color: "#ff0000"
+    color: "#333"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
   copyright:
@@ -217,14 +225,14 @@ footer:
 
   # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
-    enable: false
-    icp:
+    enable: true
+    icp: 京ICP备 1234567890号-1
     # The digit in the num of gongan beian.
-    gongan_id:
+    gongan_id: 1234567890
     # The full num of gongan beian.
-    gongan_num:
+    gongan_num: 京公网安备 1234567890号
     # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
-    gongan_icon_url:
+    gongan_icon_url: /uploads/beian.png
 
 
 # ---------------------------------------------------------------
@@ -266,8 +274,8 @@ reward_settings:
   #comment: Buy me a coffee
 
 reward:
-  #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
+  wechatpay: /images/wechatpay.png
+  alipay: /images/alipay.png
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
 
@@ -276,7 +284,7 @@ reward:
 follow_me:
   #Twitter: https://twitter.com/username || fab fa-twitter
   #Telegram: https://t.me/channel_name || fab fa-telegram
-  #WeChat: /images/wechat_channel.jpg || fab fa-weixin
+  WeChat: /images/wechat_channel.jpg || fab fa-weixin
   #RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
@@ -338,7 +346,7 @@ calendar:
 
 # Preconnect CDN for fonts and plugins.
 # For more information: https://www.w3.org/TR/resource-hints/#preconnect
-preconnect: false
+preconnect: true
 
 # Set the text alignment in posts / pages.
 text_align:
@@ -369,9 +377,9 @@ codeblock:
 
 back2top:
   enable: true
-  # Back to top in sidebar.
+  # 在侧边栏中返回顶部
   sidebar: false
-  # Scroll percent label in b2t button.
+  # 在b2t按钮中滚动百分比标签
   scrollpercent: false
 
 # Reading progress bar
@@ -385,16 +393,16 @@ reading_progress:
 # Bookmark Support
 bookmark:
   enable: false
-  # Customize the color of the bookmark.
+  # 自定义书签的颜色
   color: "#222"
-  # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
-  # If manual, only save it by clicking the bookmark-icon.
+  # 如果为自动，请在关闭页面或单击书签图标时保存阅读进度。
+  # 如果是手动的，则只能通过单击书签图标进行保存。
   save: auto
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: false
-  permalink: https://github.com/yourname
+  enable: true
+  permalink: https://github.com/gaoyuanio
   title: Follow me on GitHub
 
 
@@ -730,7 +738,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/next-theme/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
