@@ -144,8 +144,8 @@ site_state: true
 social:
   GitHub: https://github.com/gaoyuanio || fab fa-github
   E-Mail: mailto:gaoyuan9841@163.com || fa fa-envelope
+  WeChat: https://cdn.jsdelivr.net/gh/gaoyuanio/imgs/img/231615898025_.pic.jpg || fab fa-weixin
   QQ: https://qm.qq.com/cgi-bin/qm/qr?k=QW2diWiXakeqYNjughKYKvo9LVXWd0rY&noverify=0 || fab fa-qq
-  WeChat: gy0728ol || fab fa-weixin
   # Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -168,10 +168,10 @@ links_settings:
   layout: inline
 
 links:
-  链接1: https://example.com
-  链接2: https://example.com
-  链接3: https://example.com
-  链接4: https://example.com
+  # 链接1: https://example.com
+  # 链接2: https://example.com
+  # 链接3: https://example.com
+  # 链接4: https://example.com
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
@@ -618,19 +618,19 @@ livere_uid: # <your_uid>
 # Gitalk
 # For more information: https://gitalk.github.io
 gitalk:
-  enable: false
-  github_id: # GitHub repo owner
-  repo: # Repository name to store issues
-  client_id: # GitHub Application Client ID
-  client_secret: # GitHub Application Client Secret
-  admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  enable: true
+  github_id: gaoyuanio # GitHub repo owner
+  repo: gaoyuanio.github.io # Repository name to store issues
+  client_id: b6854378950da6a4a9dc # GitHub Application Client ID
+  client_secret: dfd37cf3129914db71752a3c108a7db103fddcd8 # GitHub Application Client Secret
+  admin_user: gaoyuanio # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # When the official proxy is not available, you can change it to your own proxy address
-  proxy: https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token # This is official proxy adress
+  # proxy: https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token # This is official proxy adress
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
-  language:
+  language: zh-CN
 
 # Utterances
 # For more information: https://utteranc.es
@@ -714,14 +714,13 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # For more information: http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
-  enable: false
-  total_visitors: true
-  total_visitors_icon: fa fa-user
-  total_views: true
+  enable: true
+  total_visitors: true # 总访客数量，在页脚显示
+  total_visitors_icon: user
+  total_views: true # 总阅读数量，在页脚显示
   total_views_icon: fa fa-eye
-  post_views: true
-  post_views_icon: far fa-eye
-
+  post_views: true # 单篇文章阅读数量，在标题下显示
+  post_views_icon: fa fa-eye
 
 # ---------------------------------------------------------------
 # Search Services
