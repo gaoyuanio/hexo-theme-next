@@ -367,27 +367,32 @@ codeblock:
     light: default
     dark: tomorrow-night
   prism:
-    light: prism
-    dark: prism-dark
+    light: prism-tomorrow # prism
+    dark: prism-tomorrow # prism-dark
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Available values: default | flat | mac
-    style:
+    style: mac
+  highlight:
+    enable: true
+  prismjs:
+    enable: true
+
 
 back2top:
   enable: true
   # 在侧边栏中返回顶部
-  sidebar: false
+  sidebar: true
   # 在b2t按钮中滚动百分比标签
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
-  enable: false
+  enable: true
   # Available values: top | bottom
-  position: top
-  color: "#37c6c0"
+  position: bottom
+  color: "#333333"
   height: 3px
 
 # Bookmark Support
@@ -522,16 +527,16 @@ pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox/
-fancybox: false
+fancybox: true
 
 # A JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
 # For more information: https://medium-zoom.francoischalifour.com
-mediumzoom: false
+mediumzoom: true
 
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://apoorv.pro/lozad.js/demo/
-lazyload: false
+lazyload: true
 
 # Pangu Support
 # For more information: https://github.com/vinta/pangu.js
@@ -792,7 +797,7 @@ note:
 # Tabs tag
 tabs:
   transition:
-    tabs: false
+    tabs: true
     labels: true
 
 # PDF tag
