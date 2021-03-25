@@ -168,8 +168,8 @@ links_settings:
   layout: inline
 
 links:
-  # 链接1: https://example.com
-  # 链接2: https://example.com
+  CSDN: https://blog.csdn.net/qq_32415541?spm=1010.2135.3001.5421
+  Monlor's Blog: https://www.monlor.com
   # 链接3: https://example.com
   # 链接4: https://example.com
 
