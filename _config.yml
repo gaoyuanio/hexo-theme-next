@@ -233,7 +233,7 @@ footer:
 # ---------------------------------------------------------------
 
 # Automatically excerpt description in homepage as preamble text.
-#自动将主页中的描述摘录为前言文本
+# 自动将主页中的描述摘录为前言文本
 excerpt_description: true
 
 # Read more button
