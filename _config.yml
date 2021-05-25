@@ -212,6 +212,7 @@ footer:
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
   copyright:
+    link: 'https://gaoyuan.ink'
 
   # Powered by Hexo & NexT
   powered: true
